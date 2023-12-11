@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if($karyawan_jam_kerja > $jam_kerja_normal){
             $karyawan_jam_lembur = $karyawan_jam_kerja - $jam_kerja_normal;
-            $karyawan_upah_lembur_Perjam = ($karyawan_jam_lembur * $margin_lembur) + $karyawan_gaji_perjam;
+            $karyawan_upah_lembur_Perjam = ($karyawan_gaji_perjam * $margin_lembur) + $karyawan_gaji_perjam;
             $karyawan_upah_lembur = $karyawan_upah_lembur_Perjam * $karyawan_jam_lembur;
             $karyawan_gaji_total = ($jam_kerja_normal * $karyawan_gaji_perjam) + $karyawan_upah_lembur;
         } else{
